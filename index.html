@@ -1,71 +1,312 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>All About Me</title>
-  <style>
-    body {
-      background-color: #fff0f5;
-      color: #44334b;
-      font-family: Georgia, serif;
-      text-align: center;
-      margin: 0;
-    }
-    header {
-      background-color: #d8b4e2;
-      padding: 35px;
-    }
-    section {
-      background-color: white;
-      margin: 25px auto;
-      padding: 25px;
-      border-radius: 18px;
-      max-width: 700px;
-    }
-    h1, h2 {
-      color: #8b4789;
-    }
-    img {
-      width: 220px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 15px;
-      margin: 8px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hermes Homie | Stephen Gutierrez</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #0d0d0e;
+  --blue: #19d9ff;
+  --silver: #bfc1c7;
+  --white: #f4f0e6;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+}
+
+nav {
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 1px solid #555;
+}
+
+nav strong, nav a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+nav div {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a { font-size: 12px; }
+
+.hero {
+  text-align: center;
+  padding: 95px 20px;
+  background: radial-gradient(
+    ellipse, #082d3b, #0d0d0e 70%
+  );
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--blue);
+  line-height: 1.1;
+  text-shadow: 0 0 12px rgba(0,210,255,.5);
+}
+
+h1 {
+  font-size: clamp(65px, 12vw, 140px);
+  margin: 25px 0;
+}
+
+h2 {
+  font-size: clamp(40px, 6vw, 60px);
+}
+
+h3 { font-size: 30px; }
+
+.subtitle, .tag {
+  color: var(--silver);
+}
+
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+section {
+  max-width: 1080px;
+  margin: auto;
+  padding: 75px 25px;
+  border-bottom: 1px solid #444;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.split img {
+  width: 100%;
+  border: 1px solid var(--silver);
+  border-radius: 6px;
+}
+
+.guitar {
+  object-fit: contain;
+}
+
+p { color: #ddd; }
+
+a { color: var(--blue); }
+
+.btn {
+  display: inline-block;
+  background: var(--blue);
+  color: #000;
+  padding: 12px 22px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.social {
+  display: inline-block;
+  border: 1px solid var(--blue);
+  padding: 12px 18px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social:hover {
+  background: var(--blue);
+  color: black;
+}
+
+footer {
+  text-align: center;
+  padding: 45px;
+  color: var(--silver);
+}
+
+@media(max-width:720px) {
+  .split { grid-template-columns: 1fr; }
+  section { padding: 55px 20px; }
+  nav { justify-content: center; }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Welcome to My World!</h1>
-    <p>A little bit about me and the things I love.</p>
-  </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Hi! I'm a student at Loyola University Chicago.
-    This website is a little introduction to who I am,
-    my interests, and the things that make me happy.</p>
-  </section>
+<nav>
+  <strong>HERMES HOMIE</strong>
+  <div>
+    <a href="#about">ABOUT ME</a>
+    <a href="#astrology">ASTROLOGY</a>
+    <a href="#music">MUSIC</a>
+  </div>
+</nav>
 
-  <section>
-    <h2>My Hobbies</h2>
-    <p>I enjoy exploring new places, listening to music,
-    spending time with friends, and trying new things.</p>
-    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500" alt="Beautiful lake">
-  </section>
+<header class="hero">
+  <p class="tag">Astrology · Music · Expression</p>
+  <h1>HERMES<br>HOMIE</h1>
+  <p class="subtitle">
+    The stars, the strings, and everything in between.
+  </p>
+</header>
 
-  <section>
-    <h2>My Favorite Music</h2>
-    <p>Music is a great way to relax and express yourself.
-    I love discovering new songs and artists.</p>
-    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=500" alt="Music performance">
-  </section>
+<section id="about">
+  <div class="split">
+    <div>
+      <p class="tag">The Person Behind the Work</p>
+      <h2>About Me</h2>
 
-  <section>
-    <h2>My Favorite Things</h2>
-    <p>Some of my favorite things are good food,
-    fun experiences, and making memories.</p>
-    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500" alt="Food">
-  </section>
+      <p>
+        My name is Stephen Gutierrez, and I am currently
+        a student at Loyola University Chicago. I am
+        Mexican American, born and raised in Texas,
+        with a passion for all things mystical and artistic.
+      </p>
+
+      <p>
+        I've been playing guitar since I was 12 years old,
+        and I love uploading covers to my TikTok.
+        I also have a passion for the stars, having spent
+        the past five years studying astrology rooted
+        in history and tradition.
+      </p>
+
+      <p>
+        I served four years in the United States Marine
+        Corps, stationed at Camp Pendleton, California.
+      </p>
+
+      <p>
+        As a psychology major, I hope to one day bring
+        together my different interests and experiences
+        into my therapeutic practice. My goal is to
+        eventually open my own practice, incorporating
+        multiple avenues of healing and self-expression
+        to help others.
+      </p>
+    </div>
+
+    <img
+      src="https://images.squarespace-cdn.com/content/v1/68f0f66e8d7f6e14a49fdfdb/00f61b5d-1551-4cbb-a587-28b94d414f83/bafkreicihvizpjtgu7nestxsspkg3b3pkhl6h3v5acwkqgckulr4rkvec4.jpg"
+      alt="Stephen walking outside in the snow">
+  </div>
+</section>
+
+<section id="astrology">
+  <div class="split">
+
+    <img
+      src="https://images.squarespace-cdn.com/content/v1/68f0f66e8d7f6e14a49fdfdb/18f784cb-58d5-495c-9e1e-e416e637dd26/ISlamicate%2Bastro%2Bwheel.jpg"
+      alt="Historical astrological wheel">
+
+    <div>
+      <p class="tag">Hermes Homie</p>
+      <h2>My Astrology Work</h2>
+
+      <p>
+        Astrology has been a major part of my life
+        for the past five years. My studies focus on
+        historical and traditional approaches to
+        understanding the stars.
+      </p>
+
+      <p>
+        Through Hermes Homie, I explore Islamicate,
+        ancient Babylonian, and Hellenistic
+        astrological traditions.
+      </p>
+
+      <p>
+        I enjoy studying the history behind these
+        practices and sharing my knowledge with
+        others who are curious about astrology.
+      </p>
+
+      <a class="btn"
+        href="https://www.hermeshomie.com/"
+        target="_blank" rel="noopener noreferrer">
+        VISIT HERMES HOMIE
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="music">
+  <div class="split">
+    <div>
+      <p class="tag">Beyond the Stars</p>
+      <h2>My Life Through Music</h2>
+
+      <p>
+        I've been singing and playing guitar since
+        I was 12 years old. Music has always been
+        much more than a hobby for me. It's one
+        of my greatest passions.
+      </p>
+
+      <p>
+        I have a particular love for jazz, indie,
+        and shoegaze. Each genre gives me a different
+        space to experiment with sound, emotion,
+        and creativity.
+      </p>
+
+      <p>
+        Playing guitar and singing allow me to
+        explore and express all aspects of my
+        personality. Music is a way for me to
+        connect with myself and communicate
+        feelings that words cannot always capture.
+      </p>
+
+      <p>
+        I also enjoy recording and sharing guitar
+        covers on TikTok.
+      </p>
+    </div>
+
+    <div>
+      <img class="guitar"
+           src="guitar.png"
+           alt="Stephen holding his guitar">
+
+      <a class="social"
+         href="https://www.tiktok.com/@pullup2mypart"
+         target="_blank" rel="noopener noreferrer">
+         Watch My Guitar Covers on TikTok ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h3>HERMES HOMIE</h3>
+  <p>Astrology · Music · Creativity</p>
+  <p>COMP 150 Personal Website</p>
+</footer>
+
 </body>
 </html>
