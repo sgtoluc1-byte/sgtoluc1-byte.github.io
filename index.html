@@ -9,147 +9,107 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --black: #0d0d0e;
-  --blue: #19d9ff;
-  --silver: #bfc1c7;
-  --white: #f4f0e6;
+* {
+  box-sizing: border-box;
 }
 
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  background: var(--black);
-  color: var(--white);
+  background: #0d0d0e;
+  color: #eeeeee;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.8;
 }
 
 nav {
-  padding: 18px 5%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  border-bottom: 1px solid #555;
-}
-
-nav strong, nav a {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-nav div {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-nav a { font-size: 12px; }
-
-.hero {
+  background: #181818;
+  padding: 20px;
   text-align: center;
-  padding: 95px 20px;
+  border-bottom: 1px solid silver;
+}
+
+nav a {
+  color: #19d9ff;
+  text-decoration: none;
+  margin: 15px;
+}
+
+header {
+  text-align: center;
+  padding: 90px 20px;
   background: radial-gradient(
-    ellipse, #082d3b, #0d0d0e 70%
+    circle, #123442, #0d0d0e 75%
   );
 }
 
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
-  color: var(--blue);
-  line-height: 1.1;
-  text-shadow: 0 0 12px rgba(0,210,255,.5);
+  color: #19d9ff;
+  text-shadow: 0 0 12px #0088bb;
 }
 
 h1 {
-  font-size: clamp(65px, 12vw, 140px);
-  margin: 25px 0;
+  font-size: clamp(60px, 10vw, 110px);
+  line-height: 1;
 }
 
 h2 {
-  font-size: clamp(40px, 6vw, 60px);
+  font-size: 50px;
 }
 
-h3 { font-size: 30px; }
-
-.subtitle, .tag {
-  color: var(--silver);
-}
-
-.tag {
-  text-transform: uppercase;
+.subtitle {
+  color: silver;
   letter-spacing: 3px;
-  font-size: 12px;
 }
 
 section {
-  max-width: 1080px;
+  max-width: 1000px;
   margin: auto;
-  padding: 75px 25px;
-  border-bottom: 1px solid #444;
+  padding: 65px 25px;
+  border-bottom: 1px solid #555;
 }
 
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 45px;
+  gap: 35px;
   align-items: center;
 }
 
-.split img {
+img {
   width: 100%;
-  border: 1px solid var(--silver);
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 2px solid silver;
 }
 
-.guitar {
-  object-fit: contain;
+p {
+  color: #dddddd;
 }
 
-p { color: #ddd; }
-
-a { color: var(--blue); }
-
-.btn {
+.button {
   display: inline-block;
-  background: var(--blue);
-  color: #000;
+  background: #19d9ff;
+  color: black;
   padding: 12px 22px;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 5px;
-  margin-top: 15px;
-}
-
-.social {
-  display: inline-block;
-  border: 1px solid var(--blue);
-  padding: 12px 18px;
-  margin-top: 15px;
-  border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
-}
-
-.social:hover {
-  background: var(--blue);
-  color: black;
+  margin-top: 15px;
 }
 
 footer {
   text-align: center;
-  padding: 45px;
-  color: var(--silver);
+  padding: 40px;
 }
 
-@media(max-width:720px) {
-  .split { grid-template-columns: 1fr; }
-  section { padding: 55px 20px; }
-  nav { justify-content: center; }
+@media(max-width: 700px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -157,156 +117,161 @@ footer {
 <body>
 
 <nav>
-  <strong>HERMES HOMIE</strong>
-  <div>
-    <a href="#about">ABOUT ME</a>
-    <a href="#astrology">ASTROLOGY</a>
-    <a href="#music">MUSIC</a>
-  </div>
+  <a href="#about">ABOUT ME</a>
+  <a href="#astrology">ASTROLOGY</a>
+  <a href="#music">MUSIC</a>
 </nav>
 
-<header class="hero">
-  <p class="tag">Astrology · Music · Expression</p>
-  <h1>HERMES<br>HOMIE</h1>
+<header>
   <p class="subtitle">
-    The stars, the strings, and everything in between.
+    ASTROLOGY • MUSIC • EXPRESSION
+  </p>
+
+  <h1>HERMES<br>HOMIE</h1>
+
+  <p>
+    The stars, the strings,
+    and everything in between.
   </p>
 </header>
 
 <section id="about">
   <div class="split">
     <div>
-      <p class="tag">The Person Behind the Work</p>
       <h2>About Me</h2>
 
       <p>
-        My name is Stephen Gutierrez, and I am currently
-        a student at Loyola University Chicago. I am
-        Mexican American, born and raised in Texas,
-        with a passion for all things mystical and artistic.
+        My name is Stephen Gutierrez, and I am
+        currently a student at Loyola University
+        Chicago. I am Mexican American, born
+        and raised in Texas, with a passion
+        for all things mystical and artistic.
       </p>
 
       <p>
-        I've been playing guitar since I was 12 years old,
-        and I love uploading covers to my TikTok.
-        I also have a passion for the stars, having spent
-        the past five years studying astrology rooted
-        in history and tradition.
+        I've been playing guitar since I was
+        12 years old, and I love uploading
+        covers to my TikTok.
       </p>
 
       <p>
-        I served four years in the United States Marine
-        Corps, stationed at Camp Pendleton, California.
+        I also have a passion for the stars,
+        having spent the past five years
+        studying astrology rooted in history
+        and tradition.
       </p>
 
       <p>
-        As a psychology major, I hope to one day bring
-        together my different interests and experiences
-        into my therapeutic practice. My goal is to
-        eventually open my own practice, incorporating
-        multiple avenues of healing and self-expression
+        I served four years in the United
+        States Marine Corps, stationed at
+        Camp Pendleton, California.
+      </p>
+
+      <p>
+        As a psychology major, I hope to
+        one day bring together my different
+        interests and experiences into my
+        therapeutic practice.
+      </p>
+
+      <p>
+        My goal is to eventually open my own
+        practice, incorporating multiple
+        avenues of healing and self-expression
         to help others.
       </p>
     </div>
 
-    <img
-      src="https://images.squarespace-cdn.com/content/v1/68f0f66e8d7f6e14a49fdfdb/00f61b5d-1551-4cbb-a587-28b94d414f83/bafkreicihvizpjtgu7nestxsspkg3b3pkhl6h3v5acwkqgckulr4rkvec4.jpg"
-      alt="Stephen walking outside in the snow">
+    <img src="walking.png"
+         alt="Stephen walking in the snow">
   </div>
 </section>
 
 <section id="astrology">
   <div class="split">
 
-    <img
-      src="https://images.squarespace-cdn.com/content/v1/68f0f66e8d7f6e14a49fdfdb/18f784cb-58d5-495c-9e1e-e416e637dd26/ISlamicate%2Bastro%2Bwheel.jpg"
-      alt="Historical astrological wheel">
+    <img src="astrology.png"
+         alt="Historical astrology wheel">
 
     <div>
-      <p class="tag">Hermes Homie</p>
       <h2>My Astrology Work</h2>
 
       <p>
-        Astrology has been a major part of my life
-        for the past five years. My studies focus on
-        historical and traditional approaches to
-        understanding the stars.
+        Astrology has been an important
+        part of my life for five years.
       </p>
 
       <p>
-        Through Hermes Homie, I explore Islamicate,
-        ancient Babylonian, and Hellenistic
-        astrological traditions.
+        I study historical and traditional
+        approaches to astrology, including
+        ancient Babylonian, Hellenistic,
+        and Islamicate traditions.
       </p>
 
       <p>
-        I enjoy studying the history behind these
-        practices and sharing my knowledge with
-        others who are curious about astrology.
+        Through Hermes Homie, I explore
+        the history of astrology and
+        share my knowledge with others.
       </p>
 
-      <a class="btn"
-        href="https://www.hermeshomie.com/"
-        target="_blank" rel="noopener noreferrer">
-        VISIT HERMES HOMIE
+      <a class="button"
+         href="https://www.hermeshomie.com/"
+         target="_blank"
+         rel="noopener noreferrer">
+         VISIT HERMES HOMIE
       </a>
     </div>
   </div>
 </section>
 
 <section id="music">
-  <div class="split">
-    <div>
-      <p class="tag">Beyond the Stars</p>
-      <h2>My Life Through Music</h2>
+  <h2>My Life Through Music</h2>
 
-      <p>
-        I've been singing and playing guitar since
-        I was 12 years old. Music has always been
-        much more than a hobby for me. It's one
-        of my greatest passions.
-      </p>
+  <p>
+    I've been singing and playing guitar
+    since I was 12 years old.
+  </p>
 
-      <p>
-        I have a particular love for jazz, indie,
-        and shoegaze. Each genre gives me a different
-        space to experiment with sound, emotion,
-        and creativity.
-      </p>
+  <p>
+    Music is much more than a hobby.
+    It's one of my greatest passions
+    and a way to express the different
+    aspects of my personality.
+  </p>
 
-      <p>
-        Playing guitar and singing allow me to
-        explore and express all aspects of my
-        personality. Music is a way for me to
-        connect with myself and communicate
-        feelings that words cannot always capture.
-      </p>
+  <p>
+    I have a particular love for jazz,
+    indie, and shoegaze.
+    These genres allow me to explore
+    different sounds, emotions,
+    and creative possibilities.
+  </p>
 
-      <p>
-        I also enjoy recording and sharing guitar
-        covers on TikTok.
-      </p>
-    </div>
+  <p>
+    Music gives me the freedom to
+    explore myself and express feelings
+    that words cannot always capture.
+  </p>
 
-    <div>
-      <img class="guitar"
-           src="guitar.png"
-           alt="Stephen holding his guitar">
+  <p>
+    I also love recording and uploading
+    guitar covers to TikTok.
+  </p>
 
-      <a class="social"
-         href="https://www.tiktok.com/@pullup2mypart"
-         target="_blank" rel="noopener noreferrer">
-         Watch My Guitar Covers on TikTok ↗
-      </a>
-    </div>
-  </div>
+  <a class="button"
+     href="https://www.tiktok.com/@pullup2mypart"
+     target="_blank"
+     rel="noopener noreferrer">
+     WATCH MY GUITAR COVERS
+  </a>
 </section>
 
 <footer>
   <h3>HERMES HOMIE</h3>
-  <p>Astrology · Music · Creativity</p>
+  <p>Astrology • Music • Creativity</p>
   <p>COMP 150 Personal Website</p>
 </footer>
 
 </body>
 </html>
+
