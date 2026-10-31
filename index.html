@@ -35,7 +35,13 @@ nav {
 nav a {
   color: #19d9ff;
   text-decoration: none;
-  margin: 15px;
+  margin: 12px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: white;
 }
 
 header {
@@ -58,7 +64,7 @@ h1 {
 }
 
 h2 {
-  font-size: 50px;
+  font-size: clamp(38px, 6vw, 50px);
 }
 
 .subtitle {
@@ -82,6 +88,7 @@ section {
 
 img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
   border: 2px solid silver;
 }
@@ -99,6 +106,10 @@ p {
   border-radius: 5px;
   font-weight: bold;
   margin-top: 15px;
+}
+
+.button:hover {
+  background: white;
 }
 
 footer {
@@ -182,16 +193,18 @@ footer {
       </p>
     </div>
 
-    <img src="walking.png"
-         alt="Stephen walking in the snow">
+    <img
+      src="Screenshot 2026-10-30 150134.png"
+      alt="Stephen walking in the snow">
   </div>
 </section>
 
 <section id="astrology">
   <div class="split">
 
-    <img src="astrology.png"
-         alt="Historical astrology wheel">
+    <img
+      src="Screenshot 2026-10-30 150153.png"
+      alt="Historical astrology wheel">
 
     <div>
       <h2>My Astrology Work</h2>
@@ -225,45 +238,55 @@ footer {
 </section>
 
 <section id="music">
-  <h2>My Life Through Music</h2>
+  <div class="split">
+    <div>
+      <h2>My Life Through Music</h2>
 
-  <p>
-    I've been singing and playing guitar
-    since I was 12 years old.
-  </p>
+      <p>
+        I've been singing and playing guitar
+        since I was 12 years old.
+      </p>
 
-  <p>
-    Music is much more than a hobby.
-    It's one of my greatest passions
-    and a way to express the different
-    aspects of my personality.
-  </p>
+      <p>
+        Music is much more than a hobby.
+        It's one of my greatest passions
+        and a way to express the different
+        aspects of my personality.
+      </p>
 
-  <p>
-    I have a particular love for jazz,
-    indie, and shoegaze.
-    These genres allow me to explore
-    different sounds, emotions,
-    and creative possibilities.
-  </p>
+      <p>
+        I have a particular love for jazz,
+        indie, and shoegaze.
+        These genres allow me to explore
+        different sounds, emotions,
+        and creative possibilities.
+      </p>
 
-  <p>
-    Music gives me the freedom to
-    explore myself and express feelings
-    that words cannot always capture.
-  </p>
+      <p>
+        Music gives me the freedom to
+        explore myself and express feelings
+        that words cannot always capture.
+      </p>
 
-  <p>
-    I also love recording and uploading
-    guitar covers to TikTok.
-  </p>
+      <p>
+        I also love recording and uploading
+        guitar covers to TikTok.
+      </p>
+    </div>
 
-  <a class="button"
-     href="https://www.tiktok.com/@pullup2mypart"
-     target="_blank"
-     rel="noopener noreferrer">
-     WATCH MY GUITAR COVERS
-  </a>
+    <div>
+      <img
+        src="guitar.png.png"
+        alt="Stephen holding his guitar">
+
+      <a class="button"
+         href="https://www.tiktok.com/@pullup2mypart"
+         target="_blank"
+         rel="noopener noreferrer">
+         WATCH MY GUITAR COVERS
+      </a>
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -274,3 +297,4 @@ footer {
 
 </body>
 </html>
+
